@@ -75,14 +75,17 @@ export default function Navbar() {
           {/* Links */}
           <ul
             id="mobile-menu"
-            className={`flex flex-col md:flex-row md:space-x-6 text-white text-lg transition-all duration-300 ${
+            className={`flex flex-col md:flex-row md:space-x-6 text-white text-base transition-all duration-300 ${
               isOpen
                 ? "absolute top-full left-0 w-full bg-neutral-900  md:static md:flex"
                 : "hidden md:flex"
             }`}
           >
             {navItems.map(({ name, id }) => (
-              <li key={id} className="p-3 md:py-0 text-left md:text-right">
+              <li
+                key={id}
+                className="p-2 mr-2  md:py-0 xs:mr-0 text-left md:text-right"
+              >
                 <Link
                   to={id}
                   spy
@@ -91,7 +94,7 @@ export default function Navbar() {
                   duration={300}
                   delay={100}
                   onClick={() => setIsOpen(false)}
-                  className="cursor-pointer block hover:text-teal-400 transition-colors duration-200"
+                  className="cursor-pointer block hover:text-gray-400 transition-colors duration-200"
                   tabIndex={0}
                   aria-label={`Navigate to ${name} section`}
                   onKeyDown={(e: React.KeyboardEvent) => {

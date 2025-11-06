@@ -1,4 +1,6 @@
 import Appbar from "./components/menu";
+import AboutSection from "./section/about";
+import HomeSection from "./section/banner";
 
 export default function App() {
   return (
@@ -8,8 +10,10 @@ export default function App() {
     //   </h1>
     //   <Appbar />
     // </div>
-    <div className="min-h-screen bg-white flex items-center justify-center">
+    <div>
       <Appbar />
+      <HomeSection />
+      <AboutSection />
     </div>
   );
 }
